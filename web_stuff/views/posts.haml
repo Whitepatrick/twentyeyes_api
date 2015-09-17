@@ -1,0 +1,177 @@
+%h1
+  CURRENT:
+%h3
+  NEW SITE IS GO!
+  %img{:src => "images/congrat.gif", :style => "float: right; margin: 0px 0px 15px 15px;"}/
+%p
+  Finally, the navigation bar is working as it should on the sinatra / ruby / haml
+  version of this site and I'm ready to retire the old one. I'm moving to NYC
+  at the end of this week and welcome this fix amid being SO stressed out. But
+  the end is approaching and I can't wait to be settled in and start my new
+  adventure in New York.
+%h1
+  PAST:
+%h3
+  navbar.. more like navBORING amirite?!
+%p
+  So my update to this website is essentially done except
+  the dang hamburger button won't open when the browser drops to
+  mobile size. Needless to say I've been smashing my head against
+  my keyboard for a little while now and the fix still escapes me.
+%p
+  I'm almost certain the issue is a js file not being read properly,
+  but I'll have to investigate more another time, since I don't want
+  to take up my whole Sunday fiddling with a hamburger button!
+%p
+  In other news, I made an about me page,
+  %a{:href => "/about_me"} check it out!
+%hr
+%h3
+  twenty eyes dot org: son of 20eyes!
+  %img{:src => "images/frank.png", :style => "float: right; margin: 0px 0px 15px 15px;"}/
+%p
+  Hello there! Since moving over to digital ocean for my web/utility VMs I've had a few
+  upgrades. I'm currently collecting and indexing all my system logs and apache logs on cthulhu (VM1).
+  Hastur is the second VM which does most of the behind the scenes work and is also running my
+  jenkins instance. Eventually I'll add in a section to query live site metrics from elasticsearch.
+%p
+  In bigger news, I've got a working alpha version of my new and improved version of this page
+  using
+  %a{:href => "http://http://www.sinatrarb.com/", :target => "_blank"} Sinatra
+  and
+  %a{:href => "http://getbootstrap.com/", :target => "_blank"} Bootstrap.
+  I've still got some tweaking to do but it's a first step towards making this page a little more
+  mobile friendly and visually appealing. I don't have to stomach to go full geocities so I'll just move
+  up to the late 2000's B-)
+%hr
+%h3
+  I'm moving EVERYTHING!
+  %img{:src => "images/ruby_slippers.png", :style => "float: right; margin: 0px 0px 15px 15px;"}/
+%p
+  Well Looks like I'll be moving to NYC on July 31st, very excited for that! I'm also ditching rackspace to go with
+  = succeed "." do
+    %a{:href => "https://digitalocean.com/", :target => "_blank"} Digital Ocean
+%p
+  I'm ditching rackspace because Digital Ocean is way cheaper I get double the RAM rackspace was giving me.
+  = succeed "." do
+    %a{:href => "https://www.youtube.com/watch?v=G05u7ihoYQA", :target => "_blank"} BYE FELICIARACKSPACE
+%p
+  I've been experiencing crazy amounts of burnout at work and it's beggining to really effect my free time. Typically on the weekend I usually try checking out new tools I've
+  read about during the week or continue work on ongoing projects, but lately I just haven't felt like doing it. I've decided to put the breaks on doing work stuff during non
+  work hours for the time being. I've been slowly getting back in to ruby and working a lot on TDD using
+  = succeed "." do
+    %a{:href => "https://github.com/test-unit/test-unit", :target => "_blank"} test-unit
+%hr
+%h3
+  3/29/2015: Jenkins & I.. RUNITED!
+  %img{:src => "images/jenkins_patrick.png", :style => "float: right; margin: 0px 0px 15px 15px;"}/
+%p
+  One of my favorite developers left the company I work to persue a new job, good for him!
+  He was one of the few people left who were passionate about changing the course of our
+  tech team from relying on manual testing, and was supporting almost all of the test
+  infrastructure on his own. I won't go in to great deal of said "test infrastructure" since
+  it's not that much to speak of, but the most glaring issue was that no one would be supporting
+  %a{:href => "https://www.atlassian.com/software/bamboo", :target => "_blank"} Bamboo
+  with him leaving. I have worked with Bamboo a little bit before but I was always turned off
+  by their shifty community of plugins (don't get me started), plus the license was about to
+  expire for our Bamboo install. How fortuitous! I have been using
+  %a{:href => "https://jenkins-ci.org/", :target => "_blank"} Jenkins
+  for a while now so I saw this as my chance to get us to ditch Bamboo and start fresh with Jenkins. I was like a kid in a candy store after setting up the fresh install, grabbing every plugin I could imagine being remotely useful for us, or even if it wasn't that useful it would be interesting to look at. This Bamboo > Jenkins switch started about a month ago, and as of last week it looks like we're fully migrated over to Jenkins and even have the test pipeline looking better than it did before!
+  %b Great success!
+%p
+  Besides all the fun of playing with shiny new toys, work has been getting somewhat trying. The senior QA engineer quit to persue a different job (good for him as well!) which left quality assurance in a very dubious state. This was basically a breaking point for me, I hadn't been incredibly satisfied with my job in the past few months due to an huge spike in manual testing and time for creating very basic pieces of an automated testing framework was thrown out the window. A pile of meetings and conversations later we've finally convinced management that the value of manual testing may seem better from a very narrow view, in the long run it will cost us in technical debt, and possibly more employee exits. So for now we've been aforded a little bit of extra time to work on it. It's a small victory in my opinion, allowing me time to work on getting our tech team some better tools to work with is a step in the right direction but, the entire tech team needs to commit to this not as a pet project but as a project vital to our company staying in the modern era of software development.
+%p
+  %b SOON:
+  I don't want to overload this post, will continue it in a few days!
+%hr
+%h3 2/6/2015: Hound Search 2: Son of hound search, and other updates!
+%p What a week.
+%p
+  First off, I added a very adorable little script to my post Jenkins web build
+  that initiates a git pull for all of the repos that are searchable within hound. I tried to
+  change the css but that turned out horribly so original css remains! Eventually I'm going to
+  create a separate jenkins job for this and trigger a pull when any repo gets a commit to master.
+  If you'd like to take a look at the script you can
+  = succeed "." do
+    %a{:href => "https://github.com/Whitepatrick/utility_scripts/blob/master/pull.sh", :target => "_blank"} here
+%p
+  Work related I finally found a really good, very concise ruby gem to write our QA chat bot called
+  = succeed "." do
+    %a{:href => "http://github.com/godfat/xmpp4r-robot", :target => "_blank"} xmpp4r-robot
+  %a{:href => "http://www.godfat.org/", :target => "_blank"} owner
+  about it and he mentioned he may not have the time to work on it personally, but will definitely accept
+  pull requests. I think I'm going to do it, the MUC library for XMPP4R doesn't seem
+  %b THAT
+  bad.
+%p
+  Only a few very minor tweaks to Rundeck and I think I can shift in to only supporting the system and
+  no longer actively adding or testing jobs. I'm sure that sooner or later there will be more tasks to add.
+%p
+  %b> Edit
+  \: Pretty sure
+  %a{:href => "http://github.com/etsy/hound", :target => "_blank"} Hound
+  already initiates
+  a pull on a scheduled basis, rendering that little script I wrote pretty worthless, but fun to write all
+  the same!
+%hr
+%h3 2/2/2015: Hound Search!
+%p
+  I'm putting up a link to a seach all my GitHub repositories powered by
+  = succeed "." do
+    %a{:href => "http://github.com/etsy/hound", :target => "_blank"} Hound
+%p
+  %a{:href => "http://hound.20eyes.org", :target => "_blank"} Hound my GitHub!
+%hr
+%h3 12/27/2014: 20eyes upgrade!
+%p
+  After reading a ton about
+  = succeed "," do
+    %a{:href => "https://www.docker.com/", :target => "_blank"} Docker
+  %a{:href => "https://www.youtube.com/watch?v=AxcM3nCsglA", :target => "_blank"} late one night
+  before an early work day so obviously I didn't finish restoring the previous workflow I had using Jenkins to deploy this stuff to a production server.
+%p
+  %b LESSONS LEARNED
+%ul
+  %li Have a plan! I really should have known this wasn't as simple as backing up my old config and system files. If I had taken the time to write down what I wanted, and the absolute minimum things required to get it running, things would have run a whole lot smoother.
+  %li Don't be scared! I avoided this upgrade for a while because I was making too big of a deal about going dark for a little. The upgrade process is a process I've done several times on local machines, doing it on a remote server was no different at all
+  %li Jenkins rule! I'm fortunate enough at work to be able to use Atlassian tools, but I think considering my past experiences with Jenkins, I've grown to be somewhat partial to it. Bamboo is a phenomenal tool, but I will always pick Jenkins given the choice between the two.
+  %li Whoa, Docker.. My original plan was to drop a few containers on here to see exactly how portable thye are. It definitely isn't as easy as I assumed it would be, but actually gets more and more interesting the more I learn about it. More to come from this for sure.
+%p
+  %b IN OTHER NEWS!
+%p
+  Etsy engineers
+  %a{:_blank => "", :href => "https://twitter.com/mrtazz target="} Daniel Schauenberg
+  and
+  %a{:_blank => "", :href => "https://twitter.com/ryan_frantz target="} Ryan Frantz
+  are coming to DC next month to speak about their engineering practices at
+  %a{:href => "https://codeascraft.com/", :target => "_blank"} Etsy
+  and I am beyond stoked!!
+%p
+  I got a new
+  = succeed "!" do
+    %a{:href => "images/bike.jpg", :target => "_blank"} bike
+%hr
+%h3 11/1/2014: Editor Quest
+%p
+  Recently in an effort to get a deeper understanding of Linux I have been teaching
+  myself C. It's been going pretty well so far, a little less difficult than I originally thought it would be. I've been using
+  %a{:href => "http://en.wikipedia.org/wiki/The_C_Programming_Language", :target => "_blank"} The C Programming Language 2nd Edition(K&R)
+  as a guide with some googling as well to fill in some questions about modern uses. A side project that has sprung up from this has been looking for a new editor to use. For quick edits, or a deeper view of a file than
+  %a{:href => "http://unixhelp.ed.ac.uk/CGI/man-cgi?less", :target => "_blank"} less
+  would typically give me, I use vim, but I have also been using
+  = succeed "." do
+    %a{:href => "https://wiki.gnome.org/Apps/Gedit", :target => "_blank"} gedit
+%hr
+%h3 10/24/2014: QA, Ruby, and Linux: A nerds tale
+%img{:alt => "Rundeck", :src => "images/rundeck.png"}/
+%br/
+%p
+  Wow! A lot has happened since the last time I updated this. I moved to DC a few months ago after taking a QA job with an aggregation email company. I initially applied for their sys admin
+  job but ended up being talked in to QA. So far it's been great! I've been writing some selenium tests in Java which is ..ok, but I still have some room to write command line tools in Ruby to
+  make some routine tasks a little easier. The highlight so far is getting
+  %a{:href => "http://rundeck.org/", :target => "_blank"} Rundeck
+  up and running to assist in building and rebuilding the various
+  QA environments. Trying to tackle this one in my down time at work, but I've made a fair amount of progress. The only thing I have left to do is assign access policies.
+%hr
+%h3
+  %a{:href => "/archive"} Older Posts

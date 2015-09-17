@@ -1,0 +1,115 @@
+%h1 OLDER POSTS:
+%h3 5/29/2014: It's Log!
+%img{:alt => "ELK", :src => "images/elk.png"}/
+%br/
+%p
+  In an effort to better understand the types of traffic I'm getting I have implemented an 'ELK' stack between my two
+  rackspace servers. ELK stands for
+  = succeed "," do
+    %a{:href => "http://www.elasticsearch.org", :target => "_blank"} Elasticsearch
+  = succeed "," do
+    %a{:href => "http://logstash.net", :target => "_blank"} Logstash
+  = succeed "." do
+    %a{:href => "http://rashidkpc.github.io/Kibana/", :target => "_blank"} Kibana
+%p
+  %b In other news:
+  I graduated from VCU this month. What an amazing experience! I'm very excited to see where
+  the rest of this new chapter in my life takes me. Since graduating I have been exploring a few projects I wasn't able to previously due to time consumption of school projects. Two new things I'm working on (and very excited about) are:
+  %br/
+%li
+  A Twitter bot written in python. Currently the function is to search for the latest tweet with the hashtag '#zing' and retweet it. Using the Tweepy library, the Python-Twitter library doesn't appeal to me.
+  %a{:href => "https://github.com/Whitepatrick/freshzings.git", :target => "_blank"} GitHub repo
+%li
+  A session handler writtin in PHP with MongoDB. During the last semester I wrote a session handler in PHP with MySQL and kind of regretted it. I now get the chance to write one for MongoDB which, in my opnion, should be faster and more felxible.
+  %a{:href => "https://github.com/Whitepatrick/session_handler.git", :target => "_blank"} GitHub repo
+%p Stay tuned for future updates and new projects!
+%hr
+%h3 PHP + GridFS = The most fun I've had with MongoDB!
+%img{:alt => "MongoDB", :src => "images/gridfs.png"}/
+%br/
+%p
+  Started a new branch on my
+  %a{:href => "https://github.com/Whitepatrick/20eyes-web/tree/gridfs-upload", :target => "_blank"} GitHub
+  repo for this project that will be a photo upload to MongoDB's GridFS using PHP. Had tried this previously but screwed up the branching on my Git repo, so this is the real deal! I won't make this feature live until I link the authentication section I made previously in PHP and MongoDB. Very excited about PHP and MongoDB!
+  %br/
+  = succeed "Truly" do
+    %br/
+%hr
+%h3 Great Success!
+%p
+  After beating my head against the wall trying to get the SSH transfer job to work in Jenkins for a few weeks, the job is finally completing all steps and builds are stable!
+  %br/
+  %b Console output below:
+%img{:alt => "jenkins success", :src => "images/console_success.jpg"}/
+%p
+  The journey from the previous errors I was getting and the first stable job was a long and winding one. The job is using the publish over SSH plugin. The build actively polls my GitHub repository frequently throughout the day.
+  Whenever Jenkins notices a new push that has been made to the repository it triggers the build. Jenkins gathers all files from the repo and builds them in the workspace. After the build the SSH plugin sends all files on the
+  workspace to my production server and then the files are live.
+%hr
+%h3 Hitting some road blocks!
+%p I've been ending up stumped on getting Jenkins to actually transfer the files that have been changed after polling GitHub. I am getting everything else right; Build is successfull, SSH connection made, but then 0 files transfer. Here is output:
+%br/
+%img{:alt => "jenkins error", :src => "images/jenkins-error.jpg"}/
+%p
+  I'm considering a different method of deploying as well as wrapping my brain around the transfer set issue in Jenkins. After
+  %b MUCH
+  googling I see that others have the same issue as me and it could be a configuration issue with the way my project is set up. This isn't a huge problem since there are other tools that can fill its place. Currently looking in to
+  %a{:href => "https://travis-ci.org/", :target => "_blank"} Travis-CI
+  which seems to be tailor made for GitHub deployment and operates off git hooks.
+%p
+  Another issue raised here is that I'm about a week behind schedule. I can try making up the time but next week I need to attempt to stand up
+  = succeed "." do
+    %a{:href => "http://puppetlabs.com/", :target => "_blank"} Puppet
+%hr
+%h3 Jenkins-CI Installation and configuration
+%a{:href => "http://jenkins-ci.org/", :target => "_blank"}
+  %img{:src => "images/jenkins.png"}/
+%p
+  Put the MongoDB work off for another week (it's actually not
+  supposed to be started until later in the schedule but I was getting antsy
+  to try figuring out the PHP funtions for it). This week I installed
+  %a{:href => "http://jenkins-ci.org/a", :target => "_blank"} Jenkins Continuous Integration
+  and have been working on a Build that will poll my
+  %a{:href => "http://www.github.com/Whitepatrick", :target => "_blank"} GitHub
+  every
+  10 minutes and if any changes are made the build is supposed to be published to my production server. However in my
+  experience nothing ever works the first time so I will keep plugging away.
+%p
+  %b Good signs from Jenkins:
+  While monitoring all the logs, everything is working except the actual transfer of the files
+  which is probably the most important step in the build process BUT at least all other processes are going off without
+  a hitch. SSH connection is smooth, Jenkins is connecting to GitHub and getting polling accurately. I'm still not sure if the scheduler
+  is working as it should but I can sort that detail out after I start getting consistant successful builds.
+%hr
+%h3 MongoDB + PHP
+%a{:href => "http://docs.mongodb.org/ecosystem/drivers/php/", :target => "_blank"}
+  %img{:src => "images/mongophp.png"}/
+%p
+  After looking over several different login scripts for MongoDB
+  in PHP I finally started developing one of my own to be custom fit
+  to 20eyes.org unique infrastructure. After watching some of the logs
+  while sending some DB traffic to the server I'm VERY excited about
+  what I saw. Will have this problem fixed in the next day or so.
+%p
+  %b Update:
+  Just got a script working that allows user to
+  enter username and pw on main page and script enters that info in to
+  mongodb collection. Next step is write script to authenticate user after
+  information entry
+%hr
+%h3 Back end work
+%p
+  Now working on a feature for the site that will allow
+  the user to create an account, upload an image, and submit a
+  comment with the image. All managed by mongodb, scripted
+  with php. It will be a new git branch to be merged after testing.
+%hr
+%h3 Site Creation
+%p Now creating all pages and setting up working links. By the end of tonight
+(January 24th) I would like to have a bare bones site to accomodate
+forthcoming content that will document my contiuous deployment project. Very
+Excited!
+
+%hr
+%h3
+  %a{:href => "/posts"} Newer Posts!
