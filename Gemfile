@@ -5,7 +5,8 @@ gem "pg"
 gem "activerecord"
 gem "sinatra-activerecord"
 gem 'haml'
-
+gem 'json'
+gem 'rake'
 
 group :development, :test do
   gem 'test-unit'
@@ -22,4 +23,3 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
 end
-gem 'json'

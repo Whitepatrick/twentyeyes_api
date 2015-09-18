@@ -121,6 +121,7 @@ DEPENDENCIES
   haml
   json
   pg
+  rake
   rspec-mocks
   rspec-rails
   rspec-support
@@ -131,3 +132,6 @@ DEPENDENCIES
   spring-commands-rspec
   test-unit
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.3
