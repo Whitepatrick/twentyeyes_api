@@ -119,6 +119,7 @@ DEPENDENCIES
   activerecord
   capybara
   haml
+  json
   pg
   rspec-mocks
   rspec-rails

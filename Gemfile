@@ -22,3 +22,4 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
 end
+gem 'json'
