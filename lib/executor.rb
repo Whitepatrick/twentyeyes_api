@@ -1,21 +1,17 @@
 require 'pg'
 
-class Executor
+class Inserter
 
   def initialize
     @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'pwhite')
   end
 
-  def execute_statment(sql_statment)
-    @pg_connection.prepare('statement1', sql_statment)
-    @pg_connection.exec_prepared('statement1')
+  def insert_post(title_value, post_value)
+    @pg_connection.prepare('statement1', 'INSERT INTO web.posts (title, post) values ($1, $2)')
+
+    @pg_connection.exec_prepared('statement1', [title_value, post_value,])
+    p "Now inserting #{title_value} #{post_value} into web.posts table"
+    puts "\n"
+    sleep(1.5)
   end
-end
-
-
-s = Executor.new.execute_statment("SELECT * FROM web.posts;")
-
-s.each_row do |val|
-  p val
-  sleep(2)
 end
