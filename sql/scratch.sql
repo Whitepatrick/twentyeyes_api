@@ -1,5 +1,8 @@
 \connect twentyeyesdb zaphod
-EXPLAIN ANALYZE SELECT title, post
-FROM web.posts
-WHERE post_id > 1
-ORDER BY title;
+DROP TABLE IF EXISTS web.images;
+CREATE TABLE web.images (
+image_id bigint NOT NULL PRIMARY KEY DEFAULT nextval('image_serial'),
+image_file bytea NOT NULL,
+caption text,
+date_added timestamp DEFAULT current_timestamp
+);
