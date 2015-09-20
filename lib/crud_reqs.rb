@@ -1,0 +1,6 @@
+require 'pg'
+require 'rspec'
+require_relative 'read'
+require_relative 'update'
+require_relative 'delete'
+require_relative 'create'

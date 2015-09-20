@@ -9,7 +9,7 @@ gem 'json'
 gem 'rake'
 
 group :development, :test do
-  gem 'test-unit'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'rspec-support'
   gem 'rspec-mocks'
@@ -23,4 +23,3 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
 end
-gem 'rake'
