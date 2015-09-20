@@ -36,3 +36,6 @@ build/
 globals.rb
 scratch.rb
 config_stuff
+bundle/**/*
+bundle/*
+bundle/
