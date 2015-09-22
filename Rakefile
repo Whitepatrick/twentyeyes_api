@@ -6,12 +6,12 @@ t.pattern = Dir.glob('spec/*_spec.rb')
 end
 task :default => :spec
 
-task :create_test_db do
+task :create_db do
   exec 'psql < config/create_twentyeyesdb.sql'
 end
 
 task :insert_test_rows do
-  exec 'psql < config/test_insert_rows.sql'
+  exec 'psql < config/insert_test_rows.sql'
 end
 
 task :clean do

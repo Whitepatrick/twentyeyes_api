@@ -3,7 +3,7 @@ require_relative 'crud_reqs'
 class Deleter
 
   def initialize
-    @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'zaphod')
+    @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'pwhite')
   end
 
   def delete_post(delete_this_post)

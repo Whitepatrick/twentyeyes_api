@@ -1,4 +1,4 @@
-\connect twentyeyesdb zaphod
+\connect twentyeyesdb pwhite
 INSERT INTO web.posts (post_id, title, post, date_added, current_or_nah)
 VALUES (DEFAULT, 'First fake post!', 'Not current, using mostly default values', DEFAULT, DEFAULT);
 

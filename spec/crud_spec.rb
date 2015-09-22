@@ -11,29 +11,31 @@ r = Reader.new
 u = Updater.new
 d = Deleter.new
 
-describe "Create and verify a post was inserted" do
-  it 'should store a post then verify it''s present in db' do
-      c.insert_post(title, post)
-      res = r.get_post(title)
-      result = res.field_values('title')
-      expect(result[-1]).to eq(title)
+describe "Test CRUD of posts" do
+  describe "Create and verify a post was inserted" do
+    it 'should store a post then verify it''s present in db' do
+        c.insert_post(title, post)
+        res = r.get_post(title)
+        result = res.field_values('title')
+        expect(result[-1]).to eq(title)
+    end
   end
-end
 
-describe "update and verify post is updated" do
-  it 'should update a post then delete all test rows' do
-      u.update_post(new_title, new_post, title)
-      res = r.get_post(new_title)
-      result = res.field_values('title')
-      expect(result[-1]).to eq(new_title)
+  describe "update and verify post is updated" do
+    it 'should update a post then delete all test rows' do
+        u.update_post(new_title, new_post, title)
+        res = r.get_post(new_title)
+        result = res.field_values('title')
+        expect(result[-1]).to eq(new_title)
+    end
   end
-end
 
-describe "delete post and verify post is gone" do
-  it 'should delete a post then verify is gone' do
-      d.delete_post(new_title)
-      res = r.get_post(title)
-      result = res.field_values('title')
-      expect(result[-1]).to eq(nil)
+  describe "delete post and verify post is gone" do
+    it 'should delete a post then verify is gone' do
+        d.delete_post(new_title)
+        res = r.get_post(title)
+        result = res.field_values('title')
+        expect(result[-1]).to eq(nil)
+    end
   end
 end

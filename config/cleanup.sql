@@ -1,4 +1,4 @@
-\connect twentyeyesdb zaphod
+\connect twentyeyesdb pwhite
 DROP SEQUENCE IF EXISTS web.post_serial;
 DROP SEQUENCE IF EXISTS post_serial;
 DROP TABLE IF EXISTS web.posts;
