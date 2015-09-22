@@ -1,6 +1,5 @@
 require 'rspec'
-require_relative '../lib/read'
-require_relative '../lib/create'
+require './lib/crud_reqs'
 
 title = 'TEST POST'
 post = 'Lorem ipsum dolor.'

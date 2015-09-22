@@ -4,7 +4,7 @@ require_relative 'crud_reqs'
 class Updater
 
   def initialize
-    @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'zaphod')
+    @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'pwhite')
   end
 
   def update_post(new_title, new_post, title)
