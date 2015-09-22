@@ -12,7 +12,7 @@ DROP SEQUENCE IF EXISTS web.post_serial;
 CREATE SEQUENCE web.post_serial START 100001;
 CREATE TABLE web.posts (
 post_id bigint NOT NULL PRIMARY KEY DEFAULT nextval('web.post_serial'),
-title varchar NOT NULL,
+title text NOT NULL,
 post text NOT NULL,
 date_added timestamp DEFAULT current_timestamp,
 current_or_nah BOOLEAN DEFAULT 'false'
