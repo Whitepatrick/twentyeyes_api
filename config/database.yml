@@ -7,7 +7,7 @@ default: &default
 development:
   <<: *default
   database: twentyeyesdb
-  username: zaphod
+  username: pwhite
   port: 5432
   schema_search_path: web,public
   # Minimum log levels, in increasing order:
@@ -21,4 +21,4 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: twentyeyesdbtest
+  database: twentyeyesdb

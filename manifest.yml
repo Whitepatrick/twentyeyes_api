@@ -1,0 +1,4 @@
+---
+applications:
+  - name: twentyeyes_api
+  command: bundle exec rake create_db && rake insert_test_rows

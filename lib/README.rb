@@ -22,7 +22,3 @@ u = Updater.new
 d = Deleter.new
 # sample delete
 #d.delete_post('100009')
-
-r.get_posts('title', 'GREAT NEWS').each_row do |tuple| 
-  p tuple[0,1]
-end

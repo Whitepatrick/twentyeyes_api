@@ -1,9 +1,10 @@
+#encoding: utf-8
 require_relative 'crud_reqs'
 
 class Updater
 
   def initialize
-    @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'pwhite')
+    @pg_connection = PG::Connection.new( :dbname => 'twentyeyesdb', :user => 'zaphod')
   end
 
   def update_post(new_title, new_post, title)

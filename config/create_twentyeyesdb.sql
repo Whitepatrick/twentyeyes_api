@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS twentyeyesdb;
-CREATE DATABASE twentyeyesdb WITH ENCODING 'UTF8' OWNER pwhite;
-\connect twentyeyesdb pwhite
+CREATE DATABASE twentyeyesdb WITH ENCODING 'UTF8' OWNER zaphod;
+\connect twentyeyesdb zaphod
 
 DROP SCHEMA IF EXISTS web CASCADE;
 CREATE SCHEMA web;

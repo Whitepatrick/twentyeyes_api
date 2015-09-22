@@ -39,3 +39,4 @@ config_stuff
 bundle/**/*
 bundle/*
 bundle/
+.rake_tasks
