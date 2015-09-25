@@ -1,9 +1,9 @@
 #\ -w -p 8567
 #app.rb
-require 'sinatra'
-require_relative 'lib/crud_reqs'
+require "sinatra"
+require "lib/crud_reqs"
+
+run Sinatra::Application
 
 #set :environment, :production
 #set :port, 80
-
-run Sinatra::Application

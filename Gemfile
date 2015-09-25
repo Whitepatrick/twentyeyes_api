@@ -7,8 +7,13 @@ gem "sinatra-activerecord"
 gem 'haml'
 gem 'json'
 gem 'rake'
-gem 'data_mapper'
-gem 'dm-postgres-adapter'
+gem 'sinatra_more'
+gem 'datamapper'
+gem 'dm-core'
+gem 'dm-timestamps'
+gem 'dm-sqlite-adapter'
+gem 'dm-migrations'
+
 
 group :development, :test do
   gem 'rspec'
